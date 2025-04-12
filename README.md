@@ -2,7 +2,7 @@
 
 Project created to improve my skill as a frontend developer
 
-## Tecnologies
+## Technologies
 
 - Vite
 - React

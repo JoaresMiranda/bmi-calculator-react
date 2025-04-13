@@ -6,7 +6,7 @@ const BmiTable = ({ data, bmi, info, infoClass, resetCalc, calcBmi }) => {
   return (
     <div id="result-container">
       <p className="user-info">
-        Your data: Height: {calcBmi[0]}m | Weight: {calcBmi[1]}kg
+        Your data: Height: {calcBmi.height} m | Weight: {calcBmi.weight} kg
       </p>
       <div className="user-classification">
         <p id="bmi-number">

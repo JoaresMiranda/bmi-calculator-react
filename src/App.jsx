@@ -19,7 +19,7 @@ function App() {
 
     setBmi(bmiResult);
 
-    setDataUser([height, weight]);
+    setDataUser({ height: height, weight: weight });
 
     data.forEach((item) => {
       if (bmiResult >= item.min && bmiResult <= item.max) {

@@ -4,7 +4,7 @@ import Button from './Button';
 
 import './bmiCalc.css';
 
-const BmiCalc = () => {
+const BmiCalc = ({ calcBmi }) => {
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
 
@@ -58,7 +58,7 @@ const BmiCalc = () => {
         </div>
         <div className="action-control">
           <Button id="clear-btn" text="Clear" action={clearForm} />
-          <Button id="calc-btn" text="Calculate" />
+          <Button id="calc-btn" text="Calculate" action={(e) => calcBmi(e, height, weight)} />
         </div>
       </form>
     </div>

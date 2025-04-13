@@ -34,7 +34,7 @@ const BmiCalc = ({ calcBmi }) => {
       <form id="bmi-form">
         <div className="form-inputs">
           <div className="form-control">
-            <label htmlFor="height">Height:</label>
+            <label htmlFor="height">Height (m):</label>
             <input
               type="text"
               name="height"
@@ -45,7 +45,7 @@ const BmiCalc = ({ calcBmi }) => {
             />
           </div>
           <div className="form-control">
-            <label htmlFor="weight">Weight:</label>
+            <label htmlFor="weight">Weight (kg):</label>
             <input
               type="text"
               name="weight"

@@ -19,6 +19,8 @@ function App() {
 
     setBmi(bmiResult);
 
+    setDataUser([height, weight]);
+
     data.forEach((item) => {
       if (bmiResult >= item.min && bmiResult <= item.max) {
         setInfo(item.info);
@@ -39,12 +41,21 @@ function App() {
   const [info, setInfo] = useState('');
   const [infoClass, setInfoClass] = useState('');
 
+  const [dataUser, setDataUser] = useState([]);
+
   return (
     <div className="container">
       {!bmi ? (
         <BmiCalc calcBmi={calcBmi} />
       ) : (
-        <BmiTable data={data} bmi={bmi} info={info} infoClass={infoClass} resetCalc={resetCalc} />
+        <BmiTable
+          data={data}
+          bmi={bmi}
+          info={info}
+          infoClass={infoClass}
+          resetCalc={resetCalc}
+          calcBmi={dataUser}
+        />
       )}
     </div>
   );

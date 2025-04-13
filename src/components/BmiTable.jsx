@@ -2,15 +2,20 @@ import Button from './Button';
 
 import './BmiTable.css';
 
-const BmiTable = ({ data, bmi, info, infoClass, resetCalc }) => {
+const BmiTable = ({ data, bmi, info, infoClass, resetCalc, calcBmi }) => {
   return (
     <div id="result-container">
-      <p id="bmi-number">
-        Your BMI: <span className={infoClass}>{bmi}</span>
+      <p className="user-info">
+        Your data: Height: {calcBmi[0]}m | Weight: {calcBmi[1]}kg
       </p>
-      <p id="bmi-info">
-        Situation: <span className={infoClass}>{info}</span>
-      </p>
+      <div className="user-classification">
+        <p id="bmi-number">
+          Your BMI: <span className={infoClass}>{bmi}</span>
+        </p>
+        <p id="bmi-info">
+          Situation: <span className={infoClass}>{info}</span>
+        </p>
+      </div>
       <h3>Classification:</h3>
       <div id="bmi-table">
         <div className="table-header">
